@@ -1,0 +1,261 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drink Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Playfair+Display:wght@500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fffaf5;
+      --bg-card: #fffdfb;
+      --coral: #d97a5e;
+      --coral-deep: #c1603f;
+      --mauve: #935ea3;
+    --ink: #4a3a3f;
+    --line: rgba(74, 58, 63, 0.14);
+}
+
+  * { box-sizing: border-box; }
+
+  html, body {
+        margin: 0;
+    padding: 0;
+    background: var(--bg);
+}
+
+  body {
+        font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--ink);
+    position: relative;
+    overflow-x: hidden;
+    padding: 24px 20px 80px;
+}
+
+  .floral {
+        position: absolute;
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+}
+
+  .floral.tl {
+    top: 0;
+    left: 0;
+    width: 260px;
+  }
+
+  .floral.br {
+    bottom: 0;
+    right: 0;
+    width: 280px;
+  }
+
+  @media (max-width: 560px) {
+    .floral.tl { width: 160px; }
+    .floral.br { width: 175px; }
+  }
+
+  .wrap {
+        position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  header {
+        text-align: center;
+    padding: 40px 10px 10px;
+}
+
+  h1 {
+        font-family: "Beau Rivage", "Brush Script MT", cursive;
+    font-weight: 400;
+    font-size: clamp(4rem, 14vw, 6.5rem);
+    line-height: 1;
+    color: var(--coral);
+    margin: 0;
+}
+
+  .divider {
+        width: 90px;
+    height: 1px;
+    background: var(--line);
+    margin: 26px auto 0;
+}
+
+  .subtitle {
+        margin: 18px 0 0;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mauve);
+    font-weight: 600;
+}
+
+  .menu {
+        margin-top: 56px;
+    padding: 0 10px;
+}
+
+  .category {
+        min-width: 0;
+    padding: 32px 0;
+}
+
+  .category:first-child {
+        padding-top: 0;
+}
+
+      .category + .category {
+        border-top: 1px solid var(--line);
+}
+
+  .cat-title {
+        font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--coral-deep);
+    margin: 0 0 16px;
+}
+
+  ul.items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px 28px;
+  }
+
+  ul.items li {
+        color: var(--mauve);
+    font-size: 15.5px;
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  ul.items.cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  ul.items.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 22px;
+  }
+
+  ul.items.cols-3 li {
+    font-size: 14.5px;
+  }
+
+  footer {
+        text-align: center;
+    margin-top: 64px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--mauve);
+    opacity: 0.75;
+}
+
+  @media (max-width: 560px) {
+    ul.items.cols-2 {
+      grid-template-columns: 1fr;
+    }
+    ul.items.cols-3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 380px) {
+    ul.items.cols-3 {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+  </head>
+  <body>
+
+    <img class="floral tl" src="corner-tl.png" alt="">
+
+    <img class="floral br" src="corner-br.png" alt="">
+
+    <div class="wrap">
+      <header>
+        <h1>Drink Menu</h1>
+        <div class="divider"></div>
+        <p class="subtitle">Tequilas &middot; Whiskey &middot; Beers &middot; Sparkling</p>
+      </header>
+
+      <div class="menu">
+
+        <section class="category">
+          <h2 class="cat-title">Tequilas</h2>
+          <ul class="items cols-3">
+            <li>Tequila OCHO</li>
+            <li>El Tesoro Reposado</li>
+          <li>El Tesoro Blanco</li>
+          <li>LALO</li>
+            <li>Alma del Jaguar</li>
+          <li>MIJENTA</li>
+          <li>El Tequile&ntilde;o</li>
+            <li>Tapat&iacute;o</li>
+            <li>Cascahu&iacute;n</li>
+            <li>G4</li>
+            <li>Ins&oacute;lito</li>
+            <li>Don Julio Blanco</li>
+          <li>Don Julio 70</li>
+          <li>Maestro DOBEL</li>
+            <li>7 Leguas</li>
+            <li>CAZCANES</li>
+            <li>Herencia Mexicana</li>
+            <li>Wild Common</li>
+            <li>Herradura Blanco</li>
+            <li>C&oacute;digo 1530</li>
+            <li>Patr&oacute;n A&ntilde;ejo</li>
+          <li>Cimarron</li>
+          <li>Campo Azul 1940</li>
+            <li>Viva M&eacute;xico</li>
+            <li>Volc&aacute;n</li>
+            <li>San Mat&iacute;as</li>
+          </ul>
+        </section>
+
+        <section class="category">
+          <h2 class="cat-title">Whiskey</h2>
+          <ul class="items cols-2">
+            <li>Eagle Rare 10 Years</li>
+          <li>Four Roses Single Barrel</li>
+          <li>The Macallan 12 Years</li>
+            <li>Angel's Envy</li>
+            <li>Blanton's</li>
+          </ul>
+        </section>
+
+        <section class="category">
+          <h2 class="cat-title">Beers</h2>
+          <ul class="items">
+            <li>Pacifico</li>
+            <li>Modelo Especial</li>
+            <li>Stella Artois</li>
+          </ul>
+        </section>
+
+        <section class="category">
+          <h2 class="cat-title">Sparkling</h2>
+          <ul class="items">
+            <li>Prosecco</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <footer>Please drink responsibly &middot; 21+</footer>
+    </div>
+
+  </body>
+  </html>
+  
